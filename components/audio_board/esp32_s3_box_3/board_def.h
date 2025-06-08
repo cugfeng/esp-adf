@@ -83,7 +83,7 @@
 #define BOARD_PA_GAIN             (0)  /* Power amplifier gain defined by board (dB) */
 #define PA_ENABLE_GPIO            GPIO_NUM_46
 #define HEADPHONE_DETECT          (-1)
-#define ES7210_MIC_SELECT         (ES7210_INPUT_MIC1 | ES7210_INPUT_MIC2 | ES7210_INPUT_MIC3)
+#define ES7210_MIC_SELECT         (ES7210_INPUT_MIC1 | ES7210_INPUT_MIC2)
 
 /**
  * @brief ADC input data format
