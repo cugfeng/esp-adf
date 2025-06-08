@@ -35,8 +35,8 @@ class Handler(BaseHTTPRequestHandler):
         return data
 
     def _write_wav(self, data, rates, bits, ch):
-        t = datetime.datetime.utcnow()
-        time = t.strftime('%Y%m%dT%H%M%SZ')
+        t = datetime.datetime.now()
+        time = t.strftime('%Y%m%d_%H%M%S')
         filename = str.format('{}_{}_{}_{}.wav', time, rates, bits, ch)
 
         wavfile = wave.open(filename, 'wb')

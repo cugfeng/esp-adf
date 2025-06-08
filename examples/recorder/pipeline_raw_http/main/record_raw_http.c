@@ -42,7 +42,7 @@ static const char *TAG = "REC_RAW_HTTP";
 
 #define EXAMPLE_AUDIO_SAMPLE_RATE  (16000)
 #define EXAMPLE_AUDIO_BITS         (16)
-#define EXAMPLE_AUDIO_CHANNELS     (1)
+#define EXAMPLE_AUDIO_CHANNELS     (2)
 
 #define DEMO_EXIT_BIT (BIT0)
 static EventGroupHandle_t EXIT_FLAG;
@@ -210,6 +210,7 @@ void app_main(void)
     i2s_stream_cfg_t i2s_cfg = I2S_STREAM_CFG_DEFAULT_WITH_TYLE_AND_CH(CODEC_ADC_I2S_PORT, 44100, 16, AUDIO_STREAM_READER, 1);
     i2s_cfg.type = AUDIO_STREAM_READER;
     i2s_cfg.out_rb_size = 16 * 1024; // Increase buffer to avoid missing data in bad network conditions
+    i2s_stream_set_channel_type(&i2s_cfg, I2S_CHANNEL_TYPE_RIGHT_LEFT);
     i2s_stream_reader = i2s_stream_init(&i2s_cfg);
 
     ESP_LOGI(TAG, "[3.3] Register all elements to audio pipeline");

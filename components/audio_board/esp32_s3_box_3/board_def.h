@@ -112,9 +112,9 @@ extern audio_hal_func_t AUDIO_CODEC_ES7210_DEFAULT_HANDLE;
 #define BUTTON_VOLUP_ID             (-1)
 #define BUTTON_VOLDOWN_ID           (-1)
 #define BUTTON_SET_ID               (-1)
-#define BUTTON_PLAY_ID              (0)
+#define BUTTON_PLAY_ID              (GPIO_NUM_1)
 #define BUTTON_MODE_ID              (-1)
-#define BUTTON_REC_ID               (1)
+#define BUTTON_REC_ID               (GPIO_NUM_0)
 
 #define INPUT_KEY_DEFAULT_INFO() {                     \
     {                                                  \
